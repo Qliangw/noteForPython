@@ -39,9 +39,18 @@ print("Languages:\n\tPython\n\tC\n\tJava")
 print("---------------------------------")
 
 # 删除空白
-
+# .rstrip()方法删除右面空白为临时的，不改变原有变量的值,要永久剔除需要赋值给原变量
+favorite_language = 'python '
+print(favorite_language + '.')
+print(favorite_language.rstrip() + '.')
+print(favorite_language + '.')
 print("---------------------------------")
 
+# .lstrip()方法删除左面空白为永久的，改变原有变量的值
+favorite_language = ' python '
+print("lstrip:" + favorite_language.lstrip() + '.')
+print("rstrip:" + favorite_language.rstrip() + '.')
+print(" strip:" + favorite_language.strip() + '.')
 # *-
 # *-
 # *-
