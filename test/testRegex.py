@@ -1,7 +1,6 @@
 import re
 
 # 用于测试flexGet正则分类
-
 def extract1(pattern, value, des):
     match = re.search(pattern, value, re.I | re.U)
     if match:
