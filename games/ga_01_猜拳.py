@@ -21,7 +21,7 @@ while player != 0:
         print("\033[33m玩家：%s——电脑：%s\033[0m" % (dis_str[player-1], dis_str[computer-1]))
         if(player == 1 and computer == 2) or (player == 2 and computer == 3) or (player == 3 and computer == 1):
             print("\033[32m玩家胜利\033[0m\n")
-        elif (player == 1 and computer == 1) or (player == 2 and computer == 2)or (player == 3 and computer == 3):
+        elif player == computer:
             print("\033[33m平局\033[0m\n")
         else:
             print("\033[34m电脑胜利\033[0m\n")
