@@ -1,5 +1,6 @@
 # import的使用 导入随机工具包
 import random
+from src import print_split_line
 """
 猜拳游戏
     目标
@@ -30,3 +31,4 @@ while player != 0:
     player = int(input("\033[1;40;47m石头(1)、剪刀(2)、布(3)\t请输入数字\033[0m："))
 
 print("游戏结束")
+print_split_line.multi_split_line("*", 50, 2)
