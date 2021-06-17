@@ -3,6 +3,7 @@
 def print_split_line(char, times):
     """
     打印单行分割线
+
     :param char: 要打印的字符
     :param times: 要打印字符的次数
     :return:空
@@ -13,6 +14,7 @@ def print_split_line(char, times):
 def multi_split_line(char, times, nums):
     """
     打印多行参数
+
     :param char: 要打印的字符
     :param times: 每行要打印的次数
     :param nums: 要打印多少行
