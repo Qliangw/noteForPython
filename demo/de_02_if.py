@@ -1,4 +1,5 @@
-print("---------------------------------")
+from src import print_split_line
+print_split_line.print_split_line('-', 20)
 age = int(input("请输入年龄："))
 
 i = 1
@@ -15,4 +16,4 @@ else:
     print("未成年人")
 
 print("结束")
-print("---------------------------------")
+print_split_line.print_split_line('-', 20)
