@@ -34,3 +34,25 @@ print_split_line.multi_split_line('*', 20, 1)
 dict_phone.clear()
 print(dict_phone)
 print_split_line.multi_split_line('*', 20, 1)
+
+# 遍历字典
+dict_test_phone = {"品牌": "锤子",
+                   "价格": 6999,
+                   "重量": "186g"}
+
+for k in dict_test_phone:
+    print("%s - %s" % (k, dict_test_phone[k]))
+print_split_line.multi_split_line('*', 20, 1)
+
+# 字典 + 列表
+card_list = [
+    {"品牌": "锤子",
+     "价格": 5699,
+     "子公司": "苹果"},
+    {"品牌": "苹果",
+     "价格": 8999,
+     "母公司": "锤子"}
+]
+for card_info in card_list:
+    print(card_info)
+print_split_line.multi_split_line('*', 20, 1)
