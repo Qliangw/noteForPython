@@ -13,12 +13,17 @@ def two():
 
 
 def num2str(arg):
-    switcher = {
-        0: zero,
-        1: one,
-        2: two,
-        3: lambda: "three"
-    }
+    """
+    数字转换字符串
+
+    :param arg: 要转换的数据
+    :return:
+    """
+    # 使用字典
+    switcher = {0: zero,
+                1: one,
+                2: two,
+                3: lambda: "three"}
     func = switcher.get(arg, lambda: "nothing")
     return func()
 
