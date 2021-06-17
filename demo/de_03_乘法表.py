@@ -1,6 +1,8 @@
+from src import print_split_line
 row = 1
 
-print("九九乘法表\n**********************************************************************")
+print("九九乘法表")
+print_split_line.print_split_line('*', 70)
 while row <= 9:
     col = 1
     while col <= row:
@@ -9,4 +11,5 @@ while row <= 9:
         # print("*", end="")
     print("")
     row += 1
-print("**********************************************************************\n结束")
+print_split_line.print_split_line('*', 70)
+print("结束")

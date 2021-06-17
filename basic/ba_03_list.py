@@ -1,3 +1,4 @@
+from src import print_split_line
 # 列表的简单使用
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print("查看数组：", bicycles)
@@ -7,11 +8,11 @@ print("访问第一元素（title方法）：", bicycles[0].title())
 
 # 访问最后一个元素，Python提供了特殊方法：-1
 print("访问最后一个元素：", bicycles[-1].title())
-print("---------------------------------")
+print_split_line.print_split_line('-', 20)
 # 使用列表中的值
 message = "My first bicycle was a " + bicycles[0].title() + "."
 print(message)
-print("---------------------------------")
+print_split_line.print_split_line('-', 20)
 
 # 修改、添加和删除元素
 motorcycles = ['honda', 'yamaha', 'suzuki']
@@ -54,8 +55,8 @@ print("remove删除前：" + str(motorcycles))
 too_expensive = 'ducati'
 motorcycles.remove(too_expensive)
 print("remove删除后：" + str(motorcycles))
-print("\nA" + too_expensive.title() + " is too expensive for me.E")
-print("---------------------------------")
+print("\nA" + too_expensive.title() + " is too expensive for me.")
+print_split_line.print_split_line('-', 20)
 
 # 组织列表
 # 使用sort()对列表进行永久性排序
