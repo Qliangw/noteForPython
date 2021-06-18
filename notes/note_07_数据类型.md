@@ -151,5 +151,102 @@ Python中数据类型可以分为数字型和非数字型
 - 使用多个键值对，描述一个物体的相关信息--描述更复杂的数据信息
 - 将多个字典放在一个列表中，再进行遍历，在循环体内针对每一个字典进行相同的处理
 
+### 4 字符串
+
+#### 4.1 字符串定义
+
+- 字符串就是一串字符，是编程语言中表示文本的数据类型
+- 在Python中可以是使用一对双引号`"`，也可以使用一对单引号`'`定义一个字符串
+	- 虽然可以使用`\"`或者`\'`做字符串的转义，但是在实际开发中：
+		- 如果字符串内部㤇使用`"`，可以使用`'`定义字符串
+		- 如果字符串内部需要使用`'`,可以使用`"`定义字符串
+	- 可以使用索引获取一个字符串指定位置的字符,索引从0开始
+	- 也可以使用for循环遍历字符串中的每一个字符
 
 
+
+#### 4.2 字符串常用操作
+
+##### 1) 判断类型
+
+|方法|说明|
+|---|---|
+| string.isspace() | 如果string只包含空格,则返回True|
+| string.isalnum() | 如果string至少有一个字符并且所有字符都是字母或者数字则返回True |
+| string.isalpha() | 如果string至少有一个字符并且所有字符都是字母则返回True|
+| string.isdecimal() | 如果string只包含数字则返回True,全角数字|
+| string.isdigit() |  如果string只包含数字则返回True,全角数字 (1) \u00b2|
+| string.isnumeric() | 如果string只包含数字则返回Ture,全角数字 汉字数字|
+| string.istitle() | 如果string是标题化的(每个单词的首字母大写),则返回True|
+| string.islower() | 如果string中包含至少一个区分大小写的字符,并且所有这些字符都是小写,则返回True|
+| string.isupper() | 如果string中包含至少一个区分大小写的字符,并且所有这些字符都是大写,则返回True|
+| string.isascii() | 如果string中的所有字符串都是ascii,则返回True|
+| string.isidentifier() | 如果string是有效的标识符,则返回Ture|
+| string.isprintable() | 如果string中所有字符都是可打印的或者字符串为空,则返回True|
+
+##### 2) 查找和替换
+
+|方法|说明|
+|---|---|
+| string.startswith() | 检查字符串是否以`xx`开头,是则返回True|
+| string.endswith() | 检查字符串是否以`xx`结尾,是则返回True|
+| string.find(str,start=0,end=len(string) | 检测str是否包含在string中,如果start和end指定范围,则检查是否包含在指定范围内,如果是返回开始的索引值,否则返回`-1`|
+| string.rfind() | 同上,不过是倒序开始查找|
+| string.index(str,start=0,end=len(string) | 与上面类似,只不过str不在string中会报错|
+| string.rindex() | 同上|
+| string.replace(old_str,new_str,num=sting.count(old) | 把string的内容替换,注意num的长度|
+
+##### 3) 大小写替换
+
+|方法|说明|
+|---|---|
+| string.capitalize() | 把字符串的第一个字符大写|
+| string.title() | 把字符串的每个单词首字母大写|
+| string.lower() | 转换string中所有大写->小写|
+| string.upper() | 转换string中所有小写->大写|
+| string.swapcase() | 反转string中的大小写|
+
+##### 4) 文本对齐
+
+|方法|说明|
+|---|---|
+| string.ljust(width) | 返回一个原字符串左对齐,并使用空格填充至长度width的新字符串|
+| string.rjust(width) | 返回一个原字符串右对齐,并使用空格填充至长度width的新字符串|
+| string.center(width) | 返回一个原字符串居中,并使用空格填充至长度width的新字符串|
+
+##### 5) 去除空白符
+
+
+|方法|说明|
+|---|---|
+| string.lstrip() | 截掉左边(开始)的空白字符|
+| string.rstrip() | 截掉右边(开始)的空白字符|
+| string.strip() | 截掉左右两边的空白字符|
+
+##### 6) 拆分和链接
+
+
+|方法|说明|
+|---|---|
+| string.partition(str) | 把字符串分成一个3元素的元组`(str前,str,str后)`|
+| string.rpartition(str) | 类似,倒序|
+| string.split(str="",nmu) | 以str为分隔符切片string,如果num有指定值,则仅分隔num+1个子字符串,str默认包含 `\r \n \r\n`和空格|
+| string.rsplit() | |
+| string.splitlines() | 按照行(\r \n \r\n)分隔,返回一个包含各行作为元素的列表|
+| string.join(seq) | 以string作为分隔符,将seq中所有的元素(的字符串表示)合并为一个新的字符串|
+
+##### 7 其他--暂未整理
+
+|方法|说明|
+|---|---|
+| string.casefold() | |
+| string.expandtabs() | |
+| string.zfill() | |
+| string.maketrans() | |
+| string.count() | |
+| string.format() | |
+| string.encode() | |
+| string.format_map() | |
+| string.removesuffix() | |
+| string.removeprefix() | | 
+| string.translate() | |
