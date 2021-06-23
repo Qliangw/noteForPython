@@ -1,3 +1,5 @@
+# *-* coding:utf8 *-*
+
 class Game(object):
 
     # 历史最高分
