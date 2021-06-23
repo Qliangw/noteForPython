@@ -1,18 +1,19 @@
-try:
-    num = int(input("请输入一个整数:"))
-    res = 8 / num
-    print(res)
+if __name__ == "__main__":
+    try:
+        num = int(input("请输入一个整数:"))
+        res = 8 / num
+        print(res)
 
-except ZeroDivisionError:
-    print("除数不能为零")
-except ValueError:
-    print("请输入一个整数")
-except Exception as result:
-    print("未知错误:\n%s" % result)
-else:
-    print("尝试成功")
-finally:
-    print("啥时候都会被执行")
+    except ZeroDivisionError:
+        print("除数不能为零")
+    except ValueError:
+        print("请输入一个整数")
+    except Exception as result:
+        print("未知错误:\n%s" % result)
+    else:
+        print("尝试成功")
+    finally:
+        print("啥时候都会被执行")
 
 
 def test_ex():
@@ -25,7 +26,8 @@ def test_ex():
     raise ex
 
 
-try:
-    test_ex()
-except Exception as result:
-    print(result)
+if __name__ == "__main__":
+    try:
+        test_ex()
+    except Exception as result:
+        print(result)
