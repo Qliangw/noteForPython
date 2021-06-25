@@ -16,6 +16,7 @@ from numpy.linalg import norm
 
 width, height = 640, 480
 
+
 class Boids:
     """Class that represents Boids simulation"""
     def __init__(self, N):
@@ -97,7 +98,7 @@ class Boids:
     def buttonPress(self, event):
         """event handler for matplotlib button presses"""
         # left click - add a boid
-        if event.button is 1:
+        if event.button == 1:
             self.pos = np.concatenate((self.pos, 
                                        np.array([[event.xdata, event.ydata]])), 
                                       axis=0)
@@ -105,9 +106,9 @@ class Boids:
             angles = 2*math.pi*np.random.rand(1)
             v = np.array(list(zip(np.sin(angles), np.cos(angles))))
             self.vel = np.concatenate((self.vel, v), axis=0)
-            self.N += 1 
+            self.N += 1
         # right click - scatter
-        elif event.button is 3:
+        elif event.button == 3:
             # add scattering velocity 
             self.vel += 0.1*(self.pos - np.array([[event.xdata, event.ydata]]))
         
