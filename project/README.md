@@ -4,8 +4,16 @@
 
 |名称|功能|备注|
 |---|---|---|
+|api_test | | |
+|birds |鸟群 | |
 |cards|名片管理| |
-| | | |
+|conway |模拟人生 | |
+|csv_test | | |
+|json_test | | |
+|karplus | | |
+|matplotlib_test | | |
+|pygal_test | | |
+|spirograph | | |
 
 -----
 
