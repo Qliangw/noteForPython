@@ -111,7 +111,7 @@ class Spiro:
 # A class for animating spirographs
 class SpiroAnimator:
     # constructor
-    def __init__(self, N):
+    def __init__(self, num):
         # timer value in milliseconds
         self.deltaT = 10
         # get window dimensions
@@ -119,7 +119,7 @@ class SpiroAnimator:
         self.height = turtle.window_height()
         # create spiro objects
         self.spiros = []
-        for i in range(N):
+        for i in range(num):
             # generate random parameters
             rparams = self.gen_random_params()
             # set spiro params
@@ -220,13 +220,13 @@ def main():
     args = parser.parse_args()
 
     # set to 80% screen width
-    turtle.setup(width=0.8)
+    turtle.setup(height=0.8, width=0.5)
 
     # set cursor shape
     turtle.shape('turtle')
 
     # set title
-    turtle.title("Spirographs!")
+    turtle.title(u"测试绘图")
     # add key handler for saving images
     turtle.onkey(save_drawing, "s")
     # start listening
@@ -245,7 +245,7 @@ def main():
         spiro.draw()
     else:
         # create animator object
-        spiro_anim = SpiroAnimator(4)
+        spiro_anim = SpiroAnimator(1)
         # add key handler to toggle turtle cursor
         turtle.onkey(spiro_anim.toggle_turtles, "t")
         # add key handler to restart animation
