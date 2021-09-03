@@ -73,16 +73,23 @@ readline
 
 #### 文件操作
 
-|方法名|说明|示例
+
+----------
+
+
+|方法名|说明|示例|
 |---|---|---|
 |rename|重命名文件|os.rename(源文件名, 目标文件名)|
 |remove|删除文件|os.remove(文件名)|
 
 #### 目录操作
 
+
+----------
+
 |方法名|说明|示例|
 |---|---|---|
-|listdir|目录列表|os.listdir(目录名)
+|listdir|目录列表|os.listdir(目录名)|
 |mkdir|创建目录|os.mkdir(目录名)|
 |rmdir|删除目录|os.rmdir(目录名)|
 |getcwd|获取当前目录|os.getcwd()|
